@@ -1,55 +1,57 @@
-"use client"
+"use client";
 import React from "react";
 import Image from "next/image";
-import { TypeAnimation } from 'react-type-animation';
-
+import { TypeAnimation } from "react-type-animation";
 
 const Hero = () => {
   return (
-    <section>
-      <div className="grid grid-cols-1 sm:grid-cols-12">
-        <div className="col-span-7  place-self-center text-center sm:text-left">
-          <h1 className="text-white text-4xl lg:text-6xl sm:text-5xl mb-4 font-bold">
-            Hello, I'm {''},
+    <section className="text-white py-16 px-6 sm:px-12 lg:px-24">
+      <div className="grid grid-cols-1 sm:grid-cols-12 gap-8 items-center">
+        {/* Text Section */}
+        <div className="col-span-7 place-self-center text-center sm:text-left">
+          <h1 className="text-4xl lg:text-5xl sm:text-3xl mb-4 font-bold leading-tight">
+            Hello, I'm{""}
+            <br />
             <TypeAnimation
-      sequence={[
-        // Same substring at the start will only be typed out once, initially
-        'Onzere Titus',
-        1000, // wait 1s before replacing "Mice" with "Hamsters"
-        'Frontend Web Developer',
-        // 1000,
-        // 'We produce food for Guinea Pigs',
-        // 1000,
-        // 'We produce food for Chinchillas',
-        // 1000
-      ]}
-      wrapper="span"
-      speed={50}
-      style={{ fontSize: '1em', display: 'inline-block' }}
-      repeat={Infinity}
-    />
+              sequence={[
+                "Onzere Titus",
+                2000, // Wait 2 seconds
+                "Frontend Web Developer",
+                2000, // Wait 2 seconds
+              ]}
+              wrapper="span"
+              speed={50}
+              className="inline-block text-purple-400"
+              repeat={Infinity}
+            />
           </h1>
-          <p className="text-[#ADB7BE] text-base sm:text-lg lg:text-xl mb-6 ">
+
+          <p className="text-[#ADB7BE] text-base sm:text-lg lg:text-xl mb-6">
             I am a passionate developer with a knack for crafting innovative web
             solutions. I thrive on solving problems through code and creating
             user-friendly, efficient, and visually stunning digital experiences.
-            Let's build something amazing together
+            Let's build something amazing together.
           </p>
-          <div>
-            <button className="px-6 py-3 rounded-full mr-4 bg-white hover:bg-slate-200 text-black w-full sm:w-fit">
+
+          <div className="flex flex-col sm:flex-row gap-4">
+            <button className="px-6 py-3 rounded-full bg-white hover:bg-gray-300 text-black font-semibold w-full sm:w-auto">
               Hire Me
             </button>
-            <button className="px-6 py-3 rounded-full bg-transparent hover: bg-slate-800 text-white border border-white mt-3 w-full sm:w-fit ">Download CV</button>
+            <button className="px-6 py-3 rounded-full bg-transparent hover:bg-white hover:text-black border border-white text-white font-semibold w-full sm:w-auto">
+              Download CV
+            </button>
           </div>
         </div>
-        <div className="col-span-5 place-self-center mt-4 lg:mt-8">
-          <div className="rounded-full bg-[#181818] w-[250px] h-[250px] lg:w-[400px] lg:h-[400px] relative">
+
+        {/* Image Section */}
+        <div className="col-span-5 place-self-center">
+          <div className="rounded-full bg-[#181818] w-[250px] h-[250px] lg:w-[400px] lg:h-[400px] flex items-center justify-center">
             <Image
               src="/images/hero-image.png"
               alt="hero-image"
               width={300}
               height={300}
-              className="absolute transform -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2"
+              className="object-cover"
             />
           </div>
         </div>
