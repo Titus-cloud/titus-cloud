@@ -1,7 +1,8 @@
-"use client"
-import React, {useState} from "react";
+"use client";
+import React, { useState, useRef } from "react";
 import ProjectsCard from "./ProjectsCard";
 import ProjectTag from "./ProjectTag";
+import { motion, useInView } from "framer-motion";
 
 const projectsData = [
   {
@@ -18,7 +19,7 @@ const projectsData = [
     title: "Clozzet",
     description: "An e-commerce website for wardrobe products.",
     images: "/images/clozet.png",
-    tag: "All",
+    tag: ["All"], // Fixed to array
     gitUrl: "/",
     previewUrl: "/",
   },
@@ -31,58 +32,61 @@ const projectsData = [
     gitUrl: "/",
     previewUrl: "/",
   },
-  // {
-  //   id: 1,
-  //   title: "Medic Care Clinic",
-  //   description: "A basic landing page for a medical clinic.",
-  //   images: "/images/medic.png",
-  //   tag: ["All", "Web"],
-  //   gitUrl: "/",
-  //   previewUrl: "/",
-  // },
-  // {
-  //   id: 2,
-  //   title: "Clozzet",
-  //   description: "An e-commerce website for wardrobe products.",
-  //   images: "/images/clozet.png",
-  //   tag: ["All", "Web"],
-  //   gitUrl: "/",
-  //   previewUrl: "/",
-  // },
 ];
 
 const Projects = () => {
-  const [tag, setTag] = useState('All') 
-  const handleTag = (newTag) =>{
-    setTag(newTag)
-  }
-  
-  const filterProject = projectsData.filter((project) => 
-    project.tag.includes(tag)
-  )
+  const [tag, setTag] = useState("All");
+  const ref = useRef(null);
+  const isInView = useInView(ref, { once: false }); // remove once: true if you want it to trigger every time
+
+  const cardVary = {
+    initial: { y: 50, opacity: 0 },
+    animate: { y: 0, opacity: 1 },
+  };
+
+  const handleTag = (newTag) => {
+    setTag(newTag);
+  };
+
+  const filterProject = projectsData.filter(
+    (project) => Array.isArray(project.tag) && project.tag.includes(tag)
+  );
+
   return (
-    <div className="py-8 px-4">
-      <h1 className="text-center text-4xl font-bold mb-8">My Projects</h1>
-      <div className="text-white flex flex-row justify-center items-center gap-2 py-6 horver:border-white">
-     <ProjectTag onClick={handleTag} name="All" isSelected={tag === "All"} />
-
-     <ProjectTag onClick={handleTag} name="Web" isSelected={tag === "Web"} />
-
-     <ProjectTag onClick={handleTag} name="Mobile" isSelected={tag === "Mobile"} />
+    <section ref={ref} id="projects">
+      <div className="py-8 px-4">
+        <h1 className="text-center text-4xl font-bold mb-8">My Projects</h1>
+        <div className="text-white flex flex-row justify-center items-center gap-2 py-6">
+          <ProjectTag onClick={handleTag} name="All" isSelected={tag === "All"} />
+          <ProjectTag onClick={handleTag} name="Web" isSelected={tag === "Web"} />
+          <ProjectTag onClick={handleTag} name="Mobile" isSelected={tag === "Mobile"} />
+        </div>
+        <div className="grid sm:grid-cols-1 md:grid-cols-3 gap-8 md:gap-12">
+          {filterProject.length > 0 ? (
+            filterProject.map((project, index) => (
+              <motion.div
+                key={index}
+                variants={cardVary}
+                initial="initial"
+                animate={isInView ? "animate" : "initial"}
+                transition={{ duration: 0.3,delay: index *0.4}}
+              >
+                <ProjectsCard
+                  title={project.id}
+                  description={project.description}
+                  imgUrl={project.images}
+                  gitUrl={project.gitUrl}
+                  previewUrl={project.previewUrl}
+                />
+              </motion.div>
+            
+            ))
+          ) : (
+            <p className="text-center col-span-full">No projects found for this category.</p>
+          )}
+        </div>
       </div>
-      <div className="grid md:grid-cols-3 gap-8 md:gap-12">
-        {filterProject.map((project) => (
-          <ProjectsCard
-            key={project.id}
-            title={project.title}
-            description={project.description}
-            imgUrl={project.images}
-            gitUrl={project.gitUrl}
-            previewUrl={project.previewUrl}
-          />
-        ))}
-      </div>
-    </div>
+    </section>
   );
 };
 

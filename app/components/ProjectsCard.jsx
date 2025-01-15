@@ -7,29 +7,27 @@ const ProjectsCard = ({ imgUrl, title, description, gitUrl, previewUrl }) => {
     <div>
       {/* Image Section */}
       <div
-        className="h-62 md:h-72 rounded-t-xl  group relative"
+        className="h-62 md:h-72 rounded-t-xl group relative bg-cover"
         style={{
-          backgroundImage: `url(${imgUrl})`, backgroundSize: 'cover'
+          backgroundImage: `url(${imgUrl || '/images/default.png'})`,
         }}
         aria-label={title}
       >
-        <div className="overlay flex items-center justify-center absolute top-0 left-0 w-full h-full bg-black bg-opacity-0 hidden group-hover:flex group-hover:bg-opacity-50 transition-all duration-500">
+        <div className="overlay flex items-center justify-center absolute top-0 left-0 w-full h-full bg-black bg-opacity-0 hidden group-hover:flex group-hover:bg-opacity-80 transition-all duration-500">
           <Link
-            href="gitUrl"
+            href={gitUrl}
             className="h-14 border-2 relative rounded-full border-[#ADB7BE] hover:border-white "
           >
             <CodeBracketIcon
-              className="h-10 w-10 text-[#ADB7BE] m-2 cursor-pointer hover:text-white"
-              b
+              className="h-10 w-10 text-[#ADB7BE] m-2 cursor-pointer hover:text-purple-500"
             />
           </Link>
           <Link
-            href="previewUrl"
+            href={previewUrl}
             className="h-14 border-2 ml-4 relative rounded-full border-[#ADB7BE] hover:border-white "
           >
             <EyeIcon
-              className="h-10 w-10 text-[#ADB7BE] m-2 cursor-pointer hover:text-white"
-              b
+              className="h-10 w-10 text-[#ADB7BE] m-2 cursor-pointer hover:text-purple-500"
             />
           </Link>
         </div>
