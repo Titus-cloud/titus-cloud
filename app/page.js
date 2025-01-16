@@ -4,7 +4,7 @@ import About from "./components/About";
 import Projects from "./components/Projects";
 import Contact from "./components/Contact";
 import Footer from "./components/Footer";
-import Achievements from "./components/Achievements";
+// import Achievements from "./components/Achievements";
 
 export default function Home() {
   return (
@@ -12,7 +12,7 @@ export default function Home() {
       <Navbar />
       <div className="container mx-auto py-4 px-12 mt-24">
         <Hero />
-        <Achievements /> 
+        {/* <Achievements />  */}
         <About />
         <Projects />
         <Contact />

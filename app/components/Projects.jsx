@@ -7,12 +7,12 @@ import { motion, useInView } from "framer-motion";
 const projectsData = [
   {
     id: 1,
-    title: "Medic Care Clinic",
-    description: "A basic landing page for a medical clinic.",
-    images: "/images/medic.png",
+    title: "Pizzara",
+    description: "Simple e-commerce website for selling pizzas",
+    images: "/images/pizara.png",
     tag: ["All", "Web"],
-    gitUrl: "/",
-    previewUrl: "/",
+    gitUrl: "https://github.com/Titus-cloud/My-pizzara-project",
+    previewUrl: "https://titus-cloud.github.io/My-pizzara-project/",
   },
   {
     id: 2,
@@ -20,17 +20,17 @@ const projectsData = [
     description: "An e-commerce website for wardrobe products.",
     images: "/images/clozet.png",
     tag: ["All"], // Fixed to array
-    gitUrl: "/",
-    previewUrl: "/",
+    gitUrl: "https://github.com/Titus-cloud/my-react-course",
+    previewUrl: "https://my-react-course.vercel.app/",
   },
   {
     id: 3,
-    title: "Pizzara",
+    title: "Candy Coffee Cafe",
     description: "A basic landing page for a pizza e-commerce website.",
-    images: "/images/pizara.png",
+    images: "/images/candycoffee.png",
     tag: ["All", "Web"],
-    gitUrl: "/",
-    previewUrl: "/",
+    gitUrl: "https://github.com/Titus-cloud/candy-coffee-cafe",
+    previewUrl: "https://titus-cloud.github.io/candy-coffee-cafe/",
   },
 ];
 

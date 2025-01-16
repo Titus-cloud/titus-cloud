@@ -35,7 +35,7 @@ const Email = () => {
   };
 
   return (
-    <section id="contact" className="grid md:grid-cols-2 my-12 md:my-12 py-24 ml-16 mr-16">
+    <section id="contact" className="grid md:grid-cols-2  py-24 ml-16 mr-16">
       <div>
         <h5 className="text-xl font-bold text-white my-2">Let's connect</h5>
         <p className="text-[#ADB7BE] mb-4 max-w-md">
@@ -104,7 +104,7 @@ const Email = () => {
           </div>
           <button
             type="submit"
-            className="bg-purple-500 hover:bg-purple-600 text-white font-medium py-3 rounded-lg w-full"
+            className="px-6 py-3 rounded-full bg-transparent hover:bg-purple-500 hover:text-black border border-purple-500 text-white font-semibold w-full sm:w-auto"
           >
             Send Message
           </button>

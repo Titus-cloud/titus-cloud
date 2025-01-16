@@ -8,7 +8,7 @@ const Achievements = () => {
   const achievementsList = [
     {
       metric: "Projects",
-      value: "100+",
+      value: "8+",
       postfix: "+"
     },
     {
@@ -18,11 +18,11 @@ const Achievements = () => {
     },
     {
       metric: "Awards",
-      value: "7",
+      value: "0",
     },
     {
       metric: "Years",
-      value: "5",
+      value: "1",
     },
   ];
   return (
