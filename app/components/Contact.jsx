@@ -43,7 +43,7 @@ const Email = () => {
           always open for any email. Whether you have a question or just want to
           say hi, I will always get back to you.
         </p>
-        <div className="socials flex flex-row gap-2">
+        <div className="socials flex flex-row gap-2 items-center">
           <Link href="https://github.com/Titus-cloud" className="h-16 w-16">
             <FaGithub className="text-4xl" />
           </Link>
