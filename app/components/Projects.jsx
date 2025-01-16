@@ -72,7 +72,7 @@ const Projects = () => {
                 transition={{ duration: 0.3,delay: index *0.4}}
               >
                 <ProjectsCard
-                  title={project.id}
+                  title={project.title}
                   description={project.description}
                   imgUrl={project.images}
                   gitUrl={project.gitUrl}
