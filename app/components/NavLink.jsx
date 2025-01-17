@@ -10,9 +10,9 @@ const NavLink = ({ href, title, onClick }) => {
         e.preventDefault(); // Prevent default link behavior
         const target = document.querySelector(href); // Find the target section
         if (target) {
-          target.scrollIntoView({ behavior: "smooth" }); // Smooth scroll
+          target.scrollIntoView({ behavior: "smooth" }); 
         }
-        if (onClick) onClick(); // Trigger optional onClick logic
+        if (onClick) onClick(); 
       }}
     >
       {title}

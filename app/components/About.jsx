@@ -41,15 +41,15 @@ const About = () => {
         </ul>
       ),
     },
-    {
-      title: "Experience",
-      id: "experience",
-      content: (
-        <ul className="list-disc pl-4">
-          <li>Still schooling at MYC Tech Academy</li>
-        </ul>
-      ),
-    },
+    // {
+    //   title: "Experience",
+    //   id: "experience",
+    //   content: (
+    //     <ul className="list-disc pl-4">
+    //       <li>Still schooling at MYC Tech Academy</li>
+    //     </ul>
+    //   ),
+    // },
   ];
 
   return (
