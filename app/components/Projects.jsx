@@ -27,7 +27,7 @@ const projectsData = [
     id: 3,
     title: "Candy Coffee Cafe",
     description: "A basic landing page for a pizza e-commerce website.",
-    images: "/images/candycoffee.png",
+    images: "/images/num.png",
     tag: ["All", "Web"],
     gitUrl: "https://github.com/Titus-cloud/candy-coffee-cafe",
     previewUrl: "https://titus-cloud.github.io/candy-coffee-cafe/",

@@ -54,7 +54,7 @@ const About = () => {
 
   return (
     <section
-      className="text-white bg-gradient-to-br from-gray-800 to-gray-900 py-8 px-4 rounded-xl shadow-lg"
+      className="text-white bg-gradient-to-br from-gray-800 to-gray-900 py-8 px-4 rounded-xl shadow-lg place-self-center "
       id="about"
     >
       <div className="md:grid md:grid-cols-2 gap-8 items-center xl:gap-16 sm:py-16 xl:px-16">
@@ -71,7 +71,7 @@ const About = () => {
 
         {/* About Content */}
         <div className="mt-4 md:mt-0 text-left flex flex-col h-full">
-          <h2 className="text-4xl font-bold text-white mb-4">About Me</h2>
+          <h2 className="text-4xl font-bold text-white mb-4 text-center">About Me</h2>
           <p className="text-base lg:text-lg text-gray-300">
             I'm a passionate web developer focused on creating modern,
             user-friendly websites and applications. With expertise in HTML,

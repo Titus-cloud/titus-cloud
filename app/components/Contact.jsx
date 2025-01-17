@@ -35,15 +35,15 @@ const Email = () => {
   };
 
   return (
-    <section id="contact" className="grid md:grid-cols-2 bg-gradient-to-br from-gray-800 to-gray-900 py-8 px-4 rounded-xl shadow-lg py-24 ">
-      <div className="pt-20 pl-16">
-        <h5 className="text-2xl font-bold text-purple-500 my-2">Let's connect</h5>
+    <section id="contact" className="grid md:grid-cols-2 bg-gradient-to-br from-gray-800 to-gray-900 py-8 px-4 rounded-xl shadow-lg  ">
+      <div className="pl-16 flex flex-col  align-center justify-center">
+        <h5 className="text-2xl font-bold text-purple-500 my-2 pr-[30%]  sm:text-center">Let's connect</h5>
         <p className="text-[#ADB7BE] mb-4 max-w-md">
           I am currently looking for opportunities for growth. My mailbox is
           always open for any email. Whether you have a question or just want to
           say hi, I will always get back to you.
         </p>
-        <div className="socials flex flex-row gap-2 items-center pl-[20%] pt-10">
+        <div className="socials flex flex-row gap-2 items-center pl-[20%]">
           <Link href="https://github.com/Titus-cloud" className="h-16 w-16">
             <FaGithub className="text-4xl" />
           </Link>
@@ -58,7 +58,7 @@ const Email = () => {
         </div>
       </div>
       <div>
-        <form ref={form} className="flex flex-col gap-6" onSubmit={sendEmail}>
+        <form ref={form} className="flex flex-col flex-grow align-center gap-6 " onSubmit={sendEmail}>
           <div className="mb-1">
             <label htmlFor="name" className="text-white block mb-1 text-sm">
               Name

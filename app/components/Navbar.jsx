@@ -25,8 +25,8 @@ const Navbar = () => {
   const [navbarOpen, setNavbarOpen] = useState(false);
 
   return (
-    <nav className="fixed border border-[#33353F] bg-gradient-to-br from-gray-800 to-gray-900 top-0 right-0 left-0 z-10 bg-[#121212] opacity-100">
-      <div className="flex container lg:py-2 flex-wrap items-center text-center justify-between mx-auto">
+    <nav className="fixed border border-[#33353F] bg-gradient-to-br from-gray-800 to-gray-900 top-0 right-0  left-0 z-10 bg-[#121212] opacity-100">
+      <div className="flex container m-auto lg:py-1 flex-wrap items-center text-center justify-between mx-auto">
         <Link href="/" className="flex items-center">
           {/* Use the logo */}
           <img

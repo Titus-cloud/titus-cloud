@@ -4,10 +4,11 @@ import Link from "next/link";
 import Image from "next/image";
 import { TypeAnimation } from "react-type-animation";
 import { motion } from "framer-motion";
+// import resume from "../../public/images/resume.pdf"
 
 const Hero = () => {
   return (
-    <section className="lg:py-16 text-white py-16 px-6 sm:px-12 lg:px-24">
+    <section className="lg:py-10 text-white py-16 px-6 sm:px-6 lg:px-24">
       <div className="grid grid-cols-1 sm:grid-cols-12 gap-8 items-center">
         {/* Text Section */}
         <motion.div
@@ -50,14 +51,16 @@ const Hero = () => {
               </button>
             </a>
 
-            <Link href="https://titus-cloud.github.io/my-resume/">
-              <button
-                className="px-6 py-3 rounded-full bg-transparent hover:bg-purple-500 hover:text-black border border-purple-500 text-white font-semibold w-full sm:w-auto"
-                aria-label="Download CV"
-              >
+            <a
+              href="images/resume.pdf"
+              download="resume"
+              aria-label="Download CV"
+              className="w-full sm:w-auto"
+            >
+              <button className="px-6 py-3 rounded-full bg-transparent hover:bg-purple-500 hover:text-black border border-purple-500 text-white font-semibold w-full sm:w-auto">
                 Download CV
               </button>
-            </Link>
+            </a>
           </div>
         </motion.div>
 
@@ -66,15 +69,15 @@ const Hero = () => {
           initial={{ opacity: 0, scale: 0.5 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.8 }}
-          className="col-span-4 place-self-center"
+          className="col-span-4 place-self-center hidden sm:block"
         >
-          <div className="rounded-full w-[250px] h-[250px] lg:w-[400px]  lg:h-[400px] flex items-center justify-center mt-10">
+          <div className="rounded-full w-[250px] h-[250px] lg:w-[400px] lg:h-[400px] flex items-center justify-center mt-10">
             <Image
               src="/images/prof.jpeg"
               alt="Hero Image"
               width={350}
               height={350}
-              className="object-cover rounded-full "
+              className="object-cover rounded-full"
             />
           </div>
         </motion.div>
