@@ -29,6 +29,9 @@ const About = () => {
           <li>Figma</li>
           <li>Tailwind CSS</li>
           <li>Firebase</li>
+          <li>Python</li>
+          <li>React Native</li>
+          <li>Word Press</li>
         </ul>
       ),
     },
@@ -37,7 +40,7 @@ const About = () => {
       id: "education",
       content: (
         <ul className="list-disc pl-4">
-          <li>Still schooling at MYC Tech Academy</li>
+          <li>MYC Tech Academy</li>
         </ul>
       ),
     },

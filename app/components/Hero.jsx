@@ -26,6 +26,14 @@ const Hero = () => {
                 2000, // Wait 2 seconds
                 "Frontend Web Developer",
                 2000, // Wait 2 seconds
+                "Backend Web Developer",
+                2000, // Wait 2 seconds
+                "Fullstack Web Developer",
+                2000, // Wait 2 seconds
+                "Word Press Developer",
+                2000, // Wait 2 seconds
+                "React Native Developer",
+                2000, // Wait 2 seconds
               ]}
               wrapper="span"
               speed={50}
